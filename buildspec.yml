@@ -4,8 +4,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - REPOSITORY_URI=510786428272.dkr.ecr.us-east-1.amazonaws.com/flask_image
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 510786428272.dkr.ecr.us-east-1.amazonaws.com
       - echo Logged in to Amazon ECR successfully
 
   build:
